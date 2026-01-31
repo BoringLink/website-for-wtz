@@ -9,6 +9,7 @@ import viteCompression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/website-for-wtz/',
   plugins: [
     vue(),
     vueDevTools(),
@@ -37,6 +38,7 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: "docs",
     target: 'esnext',
     minify: 'terser',
     terserOptions: {
